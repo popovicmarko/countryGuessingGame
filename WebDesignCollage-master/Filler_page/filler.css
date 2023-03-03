@@ -1,0 +1,38 @@
+@import "../base/setup.css";
+
+body{
+    color: white;
+    background-color: #141414;
+    overflow-y:hidden;
+    height: 100vh;
+    margin:0 ;
+    text-align: center;
+}
+
+.mainText p{
+    padding: 0 2rem;
+}
+
+header{
+    margin-top: 5rem;
+}
+
+h1{
+    margin-top:0;
+    text-align: center;
+}
+
+.main img{
+    margin: 0;
+    height:100%;
+    width:100%;
+}
+
+.main{
+    height: 40vh;
+    width:100vw;
+}
+
+@media only screen and (min-width:720px){
+
+}

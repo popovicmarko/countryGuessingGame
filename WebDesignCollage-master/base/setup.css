@@ -1,0 +1,115 @@
+:root {
+    --clr-primary: hsl(195, 60%, 80%);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body{
+    overflow:hidden;
+    
+}
+/* Navbar stvari */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    padding: 0 1rem;
+    font-size:.5rem;
+    background-color:black;
+    color:white;
+    font-weight: 400;
+}
+
+footer * {
+    margin: 0;
+    display:inline-block;
+}
+
+footer *:nth-child(2){
+    margin-left:90%;
+    border-radius:50% ;
+}
+
+footer *:nth-child(2):hover{
+    cursor:pointer;
+}
+
+.favLogo{
+    margin: .2rem 0 0 .2rem;
+    position:absolute;
+    bottom:0;
+    right:0;
+    height:3rem;
+    width:3rem;
+}
+
+nav{
+    z-index:10;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:100%;
+    background-color: rgba(0, 0, 0, 80%);
+}
+
+ul{
+    display:none;
+    list-style-type: none;
+    gap: 1.25rem;
+    flex-direction: column;
+}
+
+li{
+    transition:all .2s linear;
+}
+
+li:hover{
+    color:purple;
+    font-size:1.1rem;
+    font-weight: 600;
+}
+
+img{
+    margin: .5rem;
+}
+
+@media screen and (min-width: 720px) {
+    nav{
+        grid-template-columns: 1fr;
+        place-items:center;
+    }
+
+    .favLogo{
+        top:0;
+        left:0;
+    }
+
+    .phoneNav{
+        display:none;
+    }
+
+    ul{
+        display:flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+}
+
+.on{
+    display:flex;
+}

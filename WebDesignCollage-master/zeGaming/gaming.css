@@ -1,0 +1,330 @@
+@import url('../base/setup.css');
+
+body{
+    min-height: 100vh;
+    margin:0;
+    display: grid;
+    place-items:center;
+    background: #141414;
+    overflow-y:scroll;
+}
+
+#app{
+    padding: 0;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+}
+
+.Title{
+    color:white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Title h1{
+    margin-top: 0;
+}
+
+.Main{
+    display: grid;
+    place-items:center;
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+
+    min-height: 70vh;
+
+    place-items:center;
+}
+
+.MainText {
+    font-size: 1.25rem;
+    background-color: #EAEAEA;
+    grid-column: 1/4;
+}
+
+.MainText h2{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.MainText>p{
+    padding: 0 2rem 2rem 2rem ;
+}
+
+.MainText span{
+    font-weight: 600;
+    line-height: 4rem;
+}
+
+.redSpan{
+    color:red;
+    font-size: 1.25em;
+}
+
+.interaction{
+    background:none;
+    width:100%;
+    height:100%;
+    border:2px solid red;
+    padding: 1em 1.5em;
+    border-radius:50%;
+}
+
+.play{
+    background-color:red;
+    display:grid;
+    place-items: center;
+    grid-column:3;
+}
+
+
+/*Igra*/
+.engine{
+    overflow-y:scroll;
+}
+
+.gameBody{
+    margin: 0 auto;
+    border-radius: .5rem;
+    min-width: 80vw;
+    height:95vh;
+    background-color:#EAEAEA;
+}
+
+.gameBody>p{
+    margin:0;
+    width:100%;
+    text-align: right;
+    padding: .3rem;
+}
+
+.Hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items:center;
+    gap: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+
+.HeroImgContainer{
+    width:100%;
+    height: 100%;
+    grid-column:1/4
+}
+
+.HeroImage{
+    max-height: 60vh;
+    display:block;
+    margin: 0 auto;
+}
+
+.hint-container{
+    display:flex;
+    grid-column:1/4;
+    justify-content: space-between;
+    min-width:100%;
+    padding: 0 1.5rem;
+}
+
+.HeroHelp{
+    font-size:2rem;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: .75rem 1.6rem;
+    aspect-ratio:1/1;
+    border: 4px solid black;
+}
+
+.buttonClicked{
+    margin-right:auto;   
+}
+
+.HeroHelp:hover{
+    transform: scale(1);
+}
+
+.hint{
+    background-color:white;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+
+.HeroInput{
+    text-align:center;
+    grid-row:2/3;
+    min-height:6ch;
+    width:70%;
+    border: 2px solid black;
+    border-radius:2rem;
+    grid-column:1/4;
+}
+
+.Answer{
+    width:100%;
+    padding: 1.5em 0;
+    color:white;
+    font-size:.8rem;
+    font-weight: 600;
+    min-width:10ch;
+    border-radius: 0 .5rem .5rem 0;
+    border: none;
+}
+
+.Accept{
+    background-color: hsla(133, 100%, 32%, 1);
+    grid-column:1;
+}
+
+.Decline{
+    background-color: hsla(36, 95%, 54%, 1);
+    grid-column:3;
+}
+
+/* Sissterm rank */
+
+.ranking{
+    background-color:hsla(0, 0%, 92%, 1);
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+.ranking span{
+    color: red;
+}
+
+.choice-wrap{
+    display:flex;
+    min-width:100%;
+    justify-content: space-around;
+}
+
+.ranking button{
+    font-size:.8rem;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    background-color:black;
+    color:white;
+    font-weight:400;
+    border:none;
+}
+
+/* PRAVILA */
+
+.rules{
+    position:relative;
+    max-width:80vw;
+    padding: 2rem;
+    text-align: center;
+    color:white;
+}
+
+.rules p{
+    font-weight: 500;
+}
+
+.exit{
+    color:aquamarine;
+    border: 1px solid white;
+    border-radius:2rem;
+    padding:.5rem;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+.exit:hover{
+    background-color:white;
+    color:black;
+    cursor:pointer;
+}
+
+nav{
+    position:absolute;
+    top:0;
+}
+
+@media only screen and (min-width:720px){
+    #app{
+        padding: 0 2rem;
+    }
+
+    .MainText{
+        grid-column: 2/4;
+        grid-row:1/3;
+    }
+
+    .interaction{
+        height: 50%;
+        width:30%;
+    }
+
+    .play{
+        grid-column:1;
+        grid-row:2;
+    }
+
+    .rules{
+        grid-column:1;
+        grid-row:1;
+        padding: 1rem 1.5rem;
+    }
+
+    .gameBody{
+        display:grid;
+        place-items:center;
+    }
+
+
+    .HeroImgContainer{
+        width:100%;
+        grid-column:2/5;
+        grid-row:1/4;
+    }
+
+    .hint-container:nth-child(2){
+        grid-column:1;
+        grid-row:1
+    }
+
+    .hint-container:nth-child(3){
+        grid-column:1;
+        grid-row:2;
+    }
+
+    .hint-container:nth-child(4){
+        grid-column:1/2;
+        grid-row: 3;
+    }
+
+    .HeroInput{
+        grid-column:2;
+        grid-row:4;
+        width:100%;
+    }
+
+    .Accept{
+        grid-row:4;
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .Decline{
+        grid-row:4;
+        grid-column:3;
+        justify-self:end;
+    }
+
+    .hint-container button{
+        margin-right:auto;
+    }
+
+}
